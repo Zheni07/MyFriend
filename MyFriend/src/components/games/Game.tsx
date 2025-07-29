@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Game.css";
-import { GameProps } from "../../Interfaces/Login/Game";
-const Game = ({link, img }: GameProps) => {
+const Game = ({link, img }: { link: string; img: string }) => {
   return (
     <div className="d-flex justify-content-between align-items-center">
         <div className="imgBox">

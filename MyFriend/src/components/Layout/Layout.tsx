@@ -11,9 +11,6 @@ const Layout = ({ children }: { children: ReactNode }) => {
           <div className="nav-buttons">
             <Link to={"/"}>Начало</Link>
             {<Link to={"/games"} id="games-button">Игри</Link>} 
-            <Link to={"/profile"} id="profile-info-button" style={{ display: "none" }}>
-              Профил
-            </Link>
           </div>
         </nav>
       </header>
