@@ -1,9 +1,6 @@
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
 const Layout = ({ children }: { children: ReactNode }) => {
-  const navigate = useNavigate();
   return (
     <>
       <header>
