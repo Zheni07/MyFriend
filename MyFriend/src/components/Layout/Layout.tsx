@@ -1,18 +1,9 @@
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { LoginProtection } from "../../Utils/HelperFunctions";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 const Layout = ({ children }: { children: ReactNode }) => {
   const navigate = useNavigate();
-  const logout = () => {
-    const token = localStorage.getItem("token");
-    if (token) {
-      localStorage.removeItem("token");
-      toast.info("Вие успешно излязохте от профила си!")
-      navigate("/");
-    }
-  }
   return (
     <>
       <header>
@@ -23,9 +14,6 @@ const Layout = ({ children }: { children: ReactNode }) => {
           <div className="nav-buttons">
             <Link to={"/"}>Начало</Link>
             {<Link to={"/games"} id="games-button">Игри</Link>} 
-            {/* {!LoginProtection() && <Link to={"/login"} id="profile-button">Вход</Link>}
-            {!LoginProtection() && <Link to={"/register"} id="profile-button">Регистрация</Link>} */}
-            {/* {LoginProtection() && <button id="profile-button" onClick={logout}>Logout</button>} */}
             <Link to={"/profile"} id="profile-info-button" style={{ display: "none" }}>
               Профил
             </Link>

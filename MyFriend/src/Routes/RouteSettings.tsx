@@ -3,7 +3,6 @@ import App from "../App.tsx"
 import AuthPage from "../components/Auth/Auth.tsx";
 import Register from "../components/Register/Register.tsx";
 import { Games } from "../Pages/Games.tsx";
-import ProtectedRoute from "./ProtectedRoute.tsx";
 import StoryGame from "../components/games/StoryGame.tsx";
 import MindMapGame from "../components/games/MindMapGame.tsx";
 import { AnimalSoundGame } from "../components/games/AnimalSoundGame.tsx";
